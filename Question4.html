@@ -13,20 +13,20 @@
 
     <script>
         function Property1() {
-            return function(a) {
-                if (a <= 1) return 1;
-                return a * arguments.callee(a - 1);
+            return function(x) {
+                if (x <= 1) return 1;
+                return x * arguments.callee(x - 1);
             };
         }
-        var ans = Property1()(10);
-        console.log(ans);
+        var result = Property1()(10);
+        console.log(result);
 
 
 
         function Property2() {
             var sum = 0;
-            for (var i = 0; i < arguments.length; i++) {
-                sum = sum + arguments[i];
+            for (var y = 0; y < arguments.length; y++) {
+                sum = sum + arguments[y];
             }
             return sum;
         }
@@ -41,7 +41,7 @@
                 console.log(letters);
             }
         }
-        Property3("s", "i", "m", "r", "a", "n");
+        Property3("k", "r", "i", "t", "i");
     </script>
 </body>
 
