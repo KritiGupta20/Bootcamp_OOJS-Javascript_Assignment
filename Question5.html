@@ -14,14 +14,14 @@
         var invokevalue = 0;
         var instancevalue = 0;
 
-        function salary(current) {
-            this.current = current;
+        function salary(present) {
+            this.present = present;
             instancevalue += 1;
         }
 
         salary.prototype.getFull = function() {
             invokevalue += 1;
-            return this.current;
+            return this.present;
         };
         var x = new salary(12000);
         var y = new salary(20000);
