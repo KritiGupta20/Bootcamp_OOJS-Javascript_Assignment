@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>SEE CONSOLE</h1>
+    <script>
+        // -----bind-----
+
+        var firstname = {
+            fname: 'KRITI',
+            print: function() {
+                console.log('First name is: ', this.fname);
+            }
+        };
+        var f = firstname.print;
+        f();
+
+        f = f.bind(firstname);
+        f();
+
+        // ----call---
+
+
+        var lastname = {
+            lname: 'GUPTA',
+            print: function() {
+                console.log('Last name is:', this.lname);
+            }
+        };
+        lastname.print.call(lastname);
+    </script>
+
+</body>
+
+</html>

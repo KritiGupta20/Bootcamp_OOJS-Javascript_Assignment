@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 1</title>
+</head>
+
+<body>
+    <h1>SEE CONSOLE</h1>
+    <script>
+        function person() {
+            this.person = true;
+        }
+
+        function employer() {
+            this.employer = true;
+        }
+
+        function developer() {
+            this.developer = true;
+        }
+
+        employer.prototype = new person();
+
+        developer.prototype = new employer();
+        var persn = new developer();
+        console.log(persn);
+    </script>
+</body>
+
+</html>
